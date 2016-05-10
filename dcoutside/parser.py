@@ -1,9 +1,4 @@
 from bs4 import BeautifulSoup, SoupStrainer
-from datetime import datetime
-# BeautifulSoup('s',)
-
-class NoSuchGalleryError(Exception):
-    pass
 
 
 def parse_post(markup, parser, strainer: SoupStrainer) -> dict:
@@ -77,3 +72,7 @@ def parse_comments(text: str) -> list:
         comments.append(comment)
 
     return comments
+
+
+class NoSuchGalleryError(Exception):
+    pass
